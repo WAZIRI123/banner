@@ -1,0 +1,72 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .banner-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    border: 5px solid #006c5f; /* Optional border */
+  }
+  
+  /* Header Section */
+  .banner-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #ffffff;
+  }
+  
+  .logo {
+    width: 150px;
+    margin-right: 20px;
+  }
+  
+  .conference-info {
+    text-align: left;
+  }
+  
+  .conference-year {
+    font-size: 50px;
+    color: #006c5f;
+  }
+  
+  .conference-location {
+    font-size: 35px;
+    color: #006c5f;
+  }
+  
+  .conference-tagline {
+    font-size: 25px;
+    color: #0077b6;
+  }
+  
+  /* Decorative Borders */
+  .border-decor {
+    height: 20px;
+    background-image: url('path/to/decorative-pattern.jpg');
+    background-size: cover;
+  }
+  
+  /* Image Section */
+  .image-section {
+    background-color: #f4f4f4;
+    padding: 20px 0;
+  }
+  
+  .image-gallery {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .gallery-img {
+    width: 30%;
+    height: auto;
+    border-radius: 5px;
+    object-fit: cover;
+  }
+  
