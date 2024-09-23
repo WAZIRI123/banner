@@ -22,6 +22,7 @@ body {
     font-family: 'Arial', sans-serif;
     background-color: rgb(224, 224, 224);
   }
+ 
   
   .banner-container {
     max-width: 1200px;
@@ -192,7 +193,8 @@ body {
   
   .conference-tagline {
     font-size: 25px;
-    color: #908167;
+    --tw-text-opacity: 1;
+    color: rgb(147 51 234 / var(--tw-text-opacity));
   }
   /* Navbar Styles */
   .navbar {
@@ -333,7 +335,7 @@ body {
     color: #8A8477;
   }
   .font-mobile{
-    font-size: 1rem !important;
+    font-size: 1.3rem !important;
   }
 
   .conference-location {
@@ -345,7 +347,8 @@ body {
   .conference-tagline {
     font-size: 80%;
     text-align: center;
-    color: #908167;
+    --tw-text-opacity: 1;
+    color: rgb(147 51 234 / var(--tw-text-opacity));
   }
 }
 
@@ -359,8 +362,8 @@ body {
     <header class="banner-header">
       <img src="Logo3.png" alt="AORTIC Logo" class="logo">
       <div class="conference-info" style="position: relative;">
-        <h1 class="text-gray-900 dark:text-white font-bold text-5xl md:text-6xl xl:text-7xl font-mobile" style="margin-bottom: 2px;">2025 <br><span class="text-primary dark:text-white">Kilimanjaro, Tanzania.</span></h1>
-        <h3 class="conference-tagline" style="margin-top: 0px;margin-bottom: 0px;">1<sup>st</sup></sub> International Kilimanjaro Cancer Conference</h3>
+        <h1 class="text-gray-900 dark:text-white font-bold text-5xl md:text-6xl xl:text-7xl font-mobile" style="margin-bottom: 2px;">2025 <br><span class=" dark:text-white">Kilimanjaro, Tanzania.</span></h1>
+        <h3 class="conference-tagline text-primary" style="margin-top: 0px;margin-bottom: 0px;">1<sup>st</sup></sub> International Kilimanjaro Cancer Conference</h3>
         <div aria-hidden="true" class="absolute inset-0 grid grid-cols-2 -space-x-52 opacity-40 dark:opacity-20">
           <div class="blur-[106px] h-56 bg-gradient-to-br from-primary to-purple-400 dark:from-blue-700"></div>
           <div class="blur-[106px] h-32 bg-gradient-to-r from-cyan-400 to-sky-300 dark:to-indigo-600"></div>
