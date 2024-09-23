@@ -4,112 +4,304 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>2025 Cancer Conference Banner</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <!-- Slick CSS -->
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
+
+<!-- jQuery (required for Slick) -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<!-- Slick JS -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+
 <style>
     /* General Styles */
 body {
     margin: 0;
     font-family: 'Arial', sans-serif;
+    background-color: rgb(224, 224, 224);
   }
   
   .banner-container {
     max-width: 1200px;
     margin: 0 auto;
     text-align: center;
-    border: 5px solid #006c5f; /* Optional border */
+   
   }
   
   /* Header Section */
   .banner-header {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-    padding: 20px;
+    
     background-color: #ffffff;
   }
   
   .logo {
-    width: 50%;
-    margin-right: 20px;
+    width: 20%;
+    padding-left: 1%;
   }
-  
+  /* 8A8477,FCAB69,5077D4 */
   .conference-info {
-    text-align: left;
+    text-align: center;
+    padding-right: 3%;
   }
   
   .conference-year {
-    font-size: 50%;
-    color: #006c5f;
+    font-size: 50px;
+    color: #8A8477;
   }
   
   .conference-location {
-    font-size: 50%;
-    color: #006c5f;
+    font-size: 35px;
+    color: #000;
   }
   
   .conference-tagline {
-    font-size: 50%;
-    color: #0077b6;
+    font-size: 25px;
+    color: #908167;
   }
+  /* Navbar Styles */
+  .navbar {
+            display: flex;
+            justify-content: space-between;
+            background-color: #333;
+            padding: 10px 20px;
+        }
+
+        .navbar ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        .navbar ul li {
+            margin: 5px 15px;
+        }
+
+        .navbar ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 8px 15px;
+            transition: background-color 0.3s;
+        }
+
+        .navbar ul li a:hover {
+            background-color: #555;
+            border-radius: 5px;
+        }
+
+        .navbar .logo1 {
+            color: white;
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+
+       
+
+        /* Responsive layout for mobile */
+        @media (max-width: 768px) {
+            .navbar ul {
+                flex-direction: column;
+                display: none;
+            }
+
+            .navbar .logo1 {
+               width: 2%;
+            }
+
+            .navbar ul.show {
+                display: flex;
+                padding-top: 2rem;
+            }
+
+            .navbar .menu-toggle {
+                display: block;
+                color: white;
+                cursor: pointer;
+                font-size: 1.5em;
+            }
+        }
+
+        .menu-toggle {
+            display: none;
+        }
+      
   
-  /* Decorative Borders */
+  /* Decorative Borders   */
   .border-decor {
-    height: 20px;
-    background-image: url('path/to/decorative-pattern.jpg');
+    height: 30px;
+    background-color: #000;
+    background-image: url('images/New Project.png');
     background-size: cover;
   }
   
   /* Image Section */
   .image-section {
-    background-color: #f4f4f4;
-    padding: 20px 0;
+    background-color: #000;
+    padding: 5px 0;
   }
+
+  
   
   .image-gallery {
     display: flex;
     justify-content: center;
-    gap: 10px;
   }
   
   .gallery-img {
-    width: 30%;
-    height: auto;
-    border-radius: 5px;
+    width: 100%;
+    max-height: 100%;
+    min-height: 100%;
     object-fit: cover;
   }
+
+  .gallery-img::after {
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    background-image: url(images/city-shadow.png);
+    background-repeat: no-repeat;
+    margin: auto;
+    width: 100%;
+    height: 118px;
+    border-radius: 6px;
+}
   
+
+  @media screen and (max-width: 500px) {
+  .logo {
+    width: 30%;
+  }
+
+  .logo1 {
+    width: 2%;
+  }
+
+  .conference-info {
+    text-align: left;
+  }
+
+  .conference-year {
+    font-size: 80%;
+    text-align: center;
+    color: #8A8477;
+  }
+
+  .conference-location {
+    font-size: 80%;
+    text-align: center;
+    color: #000;
+  }
+
+  .conference-tagline {
+    font-size: 80%;
+    text-align: center;
+    color: #908167;
+  }
+}
+
 </style>
 </head>
 <body>
   <div class="banner-container">
+       <!-- Decorative Border -->
+       <div class="border-decor"></div>
     <!-- Header Section -->
     <header class="banner-header">
       <img src="Logo3.png" alt="AORTIC Logo" class="logo">
       <div class="conference-info">
-        <h1 class="conference-year">2025</h1>
-        <h2 class="conference-location">Hammamet, Tunisia</h2>
-        <h3 class="conference-tagline">2025 Cancer Conference</h3>
+        <h1 class="conference-year" style="margin-top: 0px;margin-bottom: 0px;">2025</h1>
+     
+        <h3 class="conference-tagline" style="margin-top: 0px;margin-bottom: 0px;">1<sup>st</sup></sub> International Kilimanjaro Cancer Conference</h3>
+        <h2 class="conference-location" style="margin-top: 0px;margin-bottom: 0px;">Kilimanjaro, Tanzania</h2>
       </div>
     </header>
 
-    <!-- Decorative Border -->
-    <div class="border-decor"></div>
+ 
 
     <!-- Image Section -->
-    <section class="image-section">
-      <div class="image-gallery">
-        <img src="kili1.jpeg" alt="Hammamet Street" class="gallery-img">
-        <img src="serengeti.jpeg" alt="Mediterranean Sea" class="gallery-img">
-        <img src="Zanzibar-01.jpg" alt="Statue" class="gallery-img">
+    <section class="image-section" >
+    <!-- Responsive Navbar -->
+    <nav class="navbar">
+      <div class="logo1">Home</div>
+     
+      <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Register Now</a></li>
+          <li><a href="#">Submit Abstract</a></li>
+          <li><a href="#">Contact</a></li>
+      </ul>
+      <i class="fas fa-bars menu-toggle"></i>
+    </nav>
+    
+      <div class="image-gallery" style="max-height:220px;">
+       <div style="width: 33%;" class="slick1">
+        <img src="kili1.jpeg" alt="Mediterranean Sea" class="gallery-img">
+        <img src="kili2.jpeg" alt="Mediterranean Sea" class="gallery-img">
       </div>
+      <div style="width: 33%; padding-left: 2px;" class="slick3">
+        <img src="msalaba.jpg" alt="Mediterranean Sea" class="gallery-img">
+        <img src="cancer.png" alt="Mediterranean Sea" class="gallery-img">
+      </div>
+      <div style="width: 33%;padding-left: 2px;" class="slick3">
+        <img src="safari.jpeg" alt="Mediterranean Sea" class="gallery-img">
+        <img src="materuni.jpg" alt="Mediterranean Sea" class="gallery-img">
+      </div>
+
+      </div>
+      
+
     </section>
 
-    <!-- Decorative Border -->
     <div class="border-decor"></div>
   </div>
 
+<script>
+    document.querySelector('.menu-toggle').addEventListener('click', function() {
+            document.querySelector('.navbar ul').classList.toggle('show');
+        });
 
+        $(document).ready(function(){
+    $('.slick1').slick({
+      // Slick options go here
+      autoplay: true,
+      dots: true,
+      arrows: false,
+      dots: false,
+      infinite: true,
+      slidesToShow: 1,
+      slidesToScroll: 1
+    });
 
+    $('.slick2').slick({
+      // Slick options go here
+      autoplay: true,
+      dots: false,
+      arrows: false,
+      infinite: true,
+      slidesToShow: 1,
+      slidesToScroll: 1
+    });
 
+    $('.slick3').slick({
+      // Slick options go here
+      autoplay: true,
+      dots: false,
+      arrows: false,
+      infinite: true,
+      slidesToShow: 1,
+      slidesToScroll: 1
+    });
+
+  });
+
+</script>
 </body>
 </html>
 
