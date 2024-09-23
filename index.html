@@ -58,6 +58,137 @@ body {
     font-size: 35px;
     color: #000;
   }
+/* background */
+  .opacity-40 {
+    opacity: .4;
+}
+
+.grid-cols-2 {
+    grid-template-columns: repeat(2,minmax(0,1fr));
+}
+
+.grid {
+    display: grid;
+}
+
+.inset-0 {
+    inset: 0;
+}
+
+.absolute {
+    position: absolute;
+}
+
+
+.blur-\[106px\] {
+    --tw-blur: blur(106px);
+    filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+
+.to-purple-400 {
+    --tw-gradient-to: #c084fc var(--tw-gradient-to-position);
+    --tw-gradient-to-position: ;
+}
+
+.text-gray-900 {
+    --tw-text-opacity: 1;
+    color: rgb(15 23 42 / var(--tw-text-opacity));
+}
+
+.font-bold {
+    font-weight: 700;
+}
+
+.from-primary {
+    --tw-gradient-from: #9333EA var(--tw-gradient-from-position);
+    --tw-gradient-from-position: ;
+    --tw-gradient-to: rgb(147 51 234 / 0) var(--tw-gradient-from-position);
+    --tw-gradient-to-position: ;
+    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+.bg-gradient-to-br {
+    background-image: linear-gradient(to bottom right,var(--tw-gradient-stops));
+}
+.h-56 {
+    height: 14rem;
+}
+*, :before, :after {
+    --tw-border-spacing-x: 0;
+    --tw-border-spacing-y: 0;
+    --tw-translate-x: 0;
+    --tw-translate-y: 0;
+    --tw-rotate: 0;
+    --tw-skew-x: 0;
+    --tw-skew-y: 0;
+    --tw-scale-x: 1;
+    --tw-scale-y: 1;
+    --tw-pan-x: ;
+    --tw-pan-y: ;
+    --tw-pinch-zoom: ;
+    --tw-scroll-snap-strictness: proximity;
+    --tw-ordinal: ;
+    --tw-slashed-zero: ;
+    --tw-numeric-figure: ;
+    --tw-numeric-spacing: ;
+    --tw-numeric-fraction: ;
+    --tw-ring-inset: ;
+    --tw-ring-offset-width: 0px;
+    --tw-ring-offset-color: #fff;
+    --tw-ring-color: rgb(59 130 246 / .5);
+    --tw-ring-offset-shadow: 0 0 #0000;
+    --tw-ring-shadow: 0 0 #0000;
+    --tw-shadow: 0 0 #0000;
+    --tw-shadow-colored: 0 0 #0000;
+    --tw-blur: ;
+    --tw-brightness: ;
+    --tw-contrast: ;
+    --tw-grayscale: ;
+    --tw-hue-rotate: ;
+    --tw-invert: ;
+    --tw-saturate: ;
+    --tw-sepia: ;
+    --tw-drop-shadow: ;
+    --tw-backdrop-blur: ;
+    --tw-backdrop-brightness: ;
+    --tw-backdrop-contrast: ;
+    --tw-backdrop-grayscale: ;
+    --tw-backdrop-hue-rotate: ;
+    --tw-backdrop-invert: ;
+    --tw-backdrop-opacity: ;
+    --tw-backdrop-saturate: ;
+    --tw-backdrop-sepia: ;
+}
+
+.-space-x-52>:not([hidden])~:not([hidden]) {
+    --tw-space-x-reverse: 0;
+    margin-right: calc(-13rem * var(--tw-space-x-reverse));
+    margin-left: calc(-13rem * calc(1 - var(--tw-space-x-reverse)));
+}
+
+.blur-\[106px\] {
+    --tw-blur: blur(106px);
+    filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+
+.to-sky-300 {
+    --tw-gradient-to: #7dd3fc var(--tw-gradient-to-position);
+    --tw-gradient-to-position: ;
+}
+.from-cyan-400 {
+    --tw-gradient-from: #22d3ee var(--tw-gradient-from-position);
+    --tw-gradient-from-position: ;
+    --tw-gradient-to: rgb(34 211 238 / 0) var(--tw-gradient-from-position);
+    --tw-gradient-to-position: ;
+    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+.bg-gradient-to-r {
+    background-image: linear-gradient(to right,var(--tw-gradient-stops));
+}
+
+.h-32 {
+    height: 8rem;
+}
+/* end background */
   
   .conference-tagline {
     font-size: 25px;
@@ -157,7 +288,6 @@ body {
   }
 
   
-  
   .image-gallery {
     display: flex;
     justify-content: center;
@@ -194,7 +324,7 @@ body {
   }
 
   .conference-info {
-    text-align: left;
+    text-align: center;
   }
 
   .conference-year {
@@ -225,10 +355,13 @@ body {
     <!-- Header Section -->
     <header class="banner-header">
       <img src="Logo3.png" alt="AORTIC Logo" class="logo">
-      <div class="conference-info">
-        <h1 class="conference-year" style="margin-top: 0px;margin-bottom: 0px;">2025</h1>
+      <div class="conference-info" style="position: relative;">
+        <h1 class="text-gray-900 dark:text-white font-bold text-5xl md:text-6xl xl:text-7xl" style="margin-bottom: 2px;">2025 <br><span class="text-primary dark:text-white">Kilimanjaro, Tanzania.</span></h1>
         <h3 class="conference-tagline" style="margin-top: 0px;margin-bottom: 0px;">1<sup>st</sup></sub> International Kilimanjaro Cancer Conference</h3>
-        <h2 class="conference-location" style="margin-top: 0px;margin-bottom: 0px;">Kilimanjaro, Tanzania</h2>
+        <div aria-hidden="true" class="absolute inset-0 grid grid-cols-2 -space-x-52 opacity-40 dark:opacity-20">
+          <div class="blur-[106px] h-56 bg-gradient-to-br from-primary to-purple-400 dark:from-blue-700"></div>
+          <div class="blur-[106px] h-32 bg-gradient-to-r from-cyan-400 to-sky-300 dark:to-indigo-600"></div>
+      </div>
       </div>
     </header>
 
