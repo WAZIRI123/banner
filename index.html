@@ -233,7 +233,50 @@ body {
             font-weight: bold;
         }
 
-       
+       /* welcome section starts */
+
+       #main, .fullwidth-box, .fusion-footer-widget-area, .page-title-bar, body {
+    background-attachment: scroll!important;
+}
+#main {
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 40px;
+    padding-bottom: 0px;
+}
+
+#main, .wrapper_blank #main {
+    background-image: none;
+    background-repeat: no-repeat;
+}
+
+#main {
+    padding: 55px 10px 45px;
+    clear: both;
+}
+
+.clearfix, .container, .container-fluid, .fusion-clearfix, .row {
+    clear: both;
+}
+
+.clearfix:after, .clearfix:before, .container-fluid:after, .container-fluid:before, .container:after, .container:before, .fusion-clearfix:after, .fusion-clearfix:before, .row:after, .row:before {
+    content: " ";
+    display: table;
+}
+
+#main>.fusion-row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#main .fusion-row, #slidingbar-area .fusion-row, .fusion-footer-widget-area .fusion-row, .fusion-page-title-row, .tfs-slider .slide-content-container .slide-content {
+    max-width: 1220px;
+}
+
+.fusion-row {
+    margin: 0 auto;
+}
+       /* welcome section ends */
 
         /* Responsive layout for mobile */
         @media (max-width: 768px) {
@@ -278,9 +321,9 @@ body {
   
   /* Decorative Borders   */
   .border-decor {
-    height: 20px;
+    height: 50px;
     background-color: #000;
-    background-image: url('images/New Project.png');
+    background-image: url('images/capture.png');
     background-size: cover;
   }
   
@@ -322,6 +365,13 @@ body {
     width: 30%;
   }
 
+  .border-decor {
+    height: 20px;
+    background-color: #000;
+    background-image: url('images/capture.png');
+    background-size: cover;
+  }
+
   .logo1 {
     width: 2%;
   }
@@ -358,7 +408,7 @@ body {
 <body>
   <div class="banner-container">
        <!-- Decorative Border -->
-       <!-- <div class="border-decor"></div> -->
+       <div class="border-decor"></div>
     <!-- Header Section -->
     <header class="banner-header">
       <img src="Logo3.png" alt="AORTIC Logo" class="logo">
@@ -381,11 +431,11 @@ body {
       <div class="logo1">Home</div>
      
       <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Register Now</a></li>
-          <li><a href="#">Submit Abstract</a></li>
-          <li><a href="#">Contact</a></li>
+          <li><a href="#" style="font-weight: bold;">Home</a></li>
+          <li><a href="#" style="font-weight: bold;">About</a></li>
+          <li><a href="#" style="font-weight: bold;">Register Now</a></li>
+          <li><a href="#" style="font-weight: bold;">Submit Abstract</a></li>
+          <li><a href="#" style="font-weight: bold;">Contact</a></li>
       </ul>
       <i class="fas fa-bars menu-toggle"></i>
     </nav>
@@ -405,11 +455,13 @@ body {
       </div>
 
       </div>
-      
 
+
+
+      
     </section>
 
-    <!-- <div class="border-decor"></div> -->
+    <div class="border-decor"></div>
   </div>
 
 <script>
